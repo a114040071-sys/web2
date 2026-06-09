@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVT抽籤</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffd6e8 0%, #d6ecff 100%);
+      color: #333;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1000px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .image-box {
+      flex: 0 0 280px;
+      display: flex;
+      justify-content: center;
+    }
+    .image-box img {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+    }
+    .content {
+      flex: 1;
+      text-align: left;
+    }
+    h1 {
+      margin: 0 0 1rem;
+      font-size: 2rem;
+    }
+    p {
+      margin: 0 0 1.5rem;
+      font-size: 1.1rem;
+    }
+    .buttons {
+      display: flex;
+      justify-content: flex-start;
+      max-width: 500px;
+    }
+    button {
+      min-width: 220px;
+      padding: 1rem 1.5rem;
+      border: none;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      color: #333;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.16);
+      background-color: rgba(255, 255, 255, 1);
+    }
+  </style>
+  <script>
+    function showRandomIdol() {
+      const idols = [
+        '今天最適合你的成員是 S.COUPS',
+        '今天最適合你的成員是 HOSHI',
+        '今天最適合你的成員是 JOSHUA',
+        '今天最適合你的成員是 JEONGHAN',
+        '今天最適合你的成員是 JUN',
+        '今天最適合你的成員是 WONWOO',
+        '今天最適合你的成員是 WOOZI',
+        '今天最適合你的成員是 THE 8',
+        '今天最適合你的成員是 MINGYU',
+        '今天最適合你的成員是 DK',
+        '今天最適合你的成員是 SEUNGKWAN',
+        '今天最適合你的成員是 VERNON',
+        '今天最適合你的成員是 DINO'
+      ];
+      const randomIndex = Math.floor(Math.random() * idols.length);
+      alert(idols[randomIndex]);
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="image-box">
+      <img src="1.jpeg" alt="偶像照片">
+    </div>
+    <div class="content">
+      <h1>今天最適合你的 SEVENTEEN 成員是？</h1>
+      <p>歡迎來到 SVT 抽籤頁面，祝你抽到喜歡的成員！</p>
+      <div class="buttons">
+        <button onclick="showRandomIdol()">開始</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
